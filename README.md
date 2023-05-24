@@ -133,8 +133,9 @@ The link for the deployed application is:
 - https://github.com/devicons/devicon/tree/master/icons
 - https://nodejs.org/en/docs
 - https://nodejs.org/api/fs.html
+- https://www.npmjs.com/package/uniqid
 
-- https://emojipedia.org/
+
 
 
 </br>
