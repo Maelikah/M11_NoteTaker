@@ -1,7 +1,7 @@
 // Declare dependencies
 const express = require('express');
 // Use the router function included in express  
-const router = express.router();
+const router = express.Router();
 // Use fs function to read and write files
 const fs = require("fs");
 // Get the databse json file
@@ -9,7 +9,7 @@ let notes = require("../db/db.json");
 // Use the uniqid package 
 const uniqid = require("uniqid");
 1// Use the color coding custom middleware
-const { clog } = require('./middleware/clog');
+const { clog } = require('../middleware/clog');
 
 // Import custom middleware, "clog to handle color coded console logs
 router.use(clog);
@@ -39,15 +39,15 @@ router.post("/notes", (req, res) => {
         let noteString = JSON.stringify(notes);
 
         // Overwrite file with new data
-        fs.writeFile(`../db/db.json`, noteString, (err) =>
+        fs.writeFile(`./db/db.json`, noteString, (err) =>
         err
             ? console.error(err)
             : console.log (`Sucessfully added a new note`)
         );
 
-        console.log(response);
-        // 201 = request has succeeded and has led to the creation of a resource
-        res.status(201).json(response);
+        // console.log(response);
+        // // 201 = request has succeeded and has led to the creation of a resource
+        res.status(201).json(newNote);
     } 
     
     else {
