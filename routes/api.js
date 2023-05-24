@@ -54,11 +54,30 @@ router.post("/notes", (req, res) => {
         // 500 = server-side error
         res.status(500).json('Error in adding note');
     }
-    
-
-    
-
 }); 
 
+// DELETE /api/notes/:id 
+router.delete('/notes/:id', (req, res) => {
+    const { id } = req.params;
 
-module.exports = app;
+    fs.readFile("./db/db.json", "utf8", (error, data) =>
+    error ? console.error(error) : (notes = JSON.parse(data))
+    );
+
+    const deletedNote = notes.filter(note => note.id === req.params.id)
+
+    if(deletedNote) {
+        let filteredNotes = notes.filter(note => note.id != req.params.id)
+        let noteString = JSON.stringify(filteredNotes);
+        fs.writeFile(`./db/db.json`, noteString, (err) =>
+        err
+        ? console.error(err)
+        : console.log(`Note deleted!`));
+
+        res.status(200).json(filteredNotes);
+    } else {
+        res.status(500).json('Error trying to delete note');
+    }
+});
+
+module.exports = router;
