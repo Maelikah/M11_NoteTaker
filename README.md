@@ -15,7 +15,7 @@
 
 </br>
 
-The purpose of this repository is to apply the concepts reviewed during the week and generate a note taker application using express.js and that is deployed in heroku. 
+The purpose of this repository is to apply the concepts reviewed during the week and modify starter code to generate an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file. The application will be deployed in Heroku. 
 
 </br>
 
@@ -56,7 +56,6 @@ The purpose of this repository is to apply the concepts reviewed during the week
 - [Usage](#💻-usage)
 - [License](#🔏-license)
 - [Credits](#🖋️-credits)
-- [Tests](#🧪-tests)
 - [User Story](#✍️-user-story)
 - [Acceptance Criteria](#👏-acceptance-criteria)
 
@@ -87,37 +86,24 @@ The purpose of this repository is to apply the concepts reviewed during the week
 
 </br>
 
-1. Open integrated terminal
-2. Run node index.js
-3. Answer the prompts that follow
-4. A SVG Icon will be generated and stored in the `examples` folder.
+1. Access website through deployed Heroku link.
+2. Input required data.
+3. Click the 'save' icon to save a new note.
+4. Access and open saved notes by selecting a note from the list.
+5. Click the red trash can to delete a saved note.
 
 </br>
 
 The github URL containing the code for this project is located at:
 
-https://github.com/Maelikah/M10_SVGLogoMaker
+https://github.com/Maelikah/M11_NoteTaker
+
+
+The link for the deployed application is: 
+
+
 
 </br>
-
-Code Functionality:
-
-![Code Generation Walkthrough Preview](./assets/Code-Walkthrough.gif)
-
-</br>
-
-User Input Functionality:
-
-![User Input Walkthrough Preview](./assets/Input-Walkthrough.gif)
-
-</br>
-
-Tests Functionality:
-
-![Tests Walkthrough Preview](./assets/Tests-Walkthrough.gif)
-
-</br>
-
 
 ---
 
@@ -145,32 +131,10 @@ Tests Functionality:
 
 - https://shields.io/category/license
 - https://github.com/devicons/devicon/tree/master/icons
-- https://www.npmjs.com/package/inquirer
-- https://www.npmjs.com/package/inquirer#answers
 - https://nodejs.org/en/docs
 - https://nodejs.org/api/fs.html
-- https://jestjs.io/
+
 - https://emojipedia.org/
-- https://www.w3.org/wiki/CSS/Properties/color/keywords
-- https://regexr.com/3ag5b
-- https://en.wikipedia.org/wiki/SVG
-- https://www.w3schools.com/graphics/tryit.asp?
-- https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide
-
-</br>
-
-
----
-
-##   🧪 [Tests](#📑-table-of-contents)
-
----
-
-</br>
-
-
-
-Type `npm run test` on command line
 
 
 </br>
@@ -185,9 +149,10 @@ Type `npm run test` on command line
 </br>
 
 ```md
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
+AS A small business owner
+I WANT to be able to write and save notes
+SO THAT I can organize my thoughts and keep track of tasks I need to complete
+
 ```
 
 </br>
@@ -202,20 +167,20 @@ SO THAT I don't have to pay a graphic designer
 
 
 ```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for text
-THEN I can enter up to three characters
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, square, triangle, `inverted triangle` and `ellipse` 
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
-AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+GIVEN a note-taking application
+WHEN I open the Note Taker
+THEN I am presented with a landing page with a link to a notes page
+WHEN I click on the link to the notes page
+THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
+WHEN I enter a new note title and the note’s text
+THEN a Save icon appears in the navigation at the top of the page
+WHEN I click on the Save icon
+THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
+WHEN I click on an existing note in the list in the left-hand column
+THEN that note appears in the right-hand column
+WHEN I click on the Write icon in the navigation at the top of the page
+THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+
 ```
 
 </br>
@@ -223,4 +188,4 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ---
 
-[Back to Top](#svg-logo-maker)
+[Back to Top](#note-taker)
